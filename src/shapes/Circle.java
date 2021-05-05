@@ -1,18 +1,23 @@
+
 package shapes;
 
+public class Circle {
+    private double radius;
 
 
-class Circle {
-    public String name;
-
-    // the circle constructor
-    private Circle() {
-        System.out.println("A circle is being created!");
+    // constructor
+    public Circle(double radius){
+        this.radius = radius;
     }
 
-    public static void main(String[] args) {
 
+
+    // methods
+    public double getArea(){
+        return Math.PI * (Math.pow(this.radius, 2));
+    }
+
+    public double getCircumference(){
+        return 2 * Math.PI * this.radius;
     }
 }
-
-

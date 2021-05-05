@@ -1,10 +1,17 @@
 package shapes;
 
-public class Rectangle  {
+class Rectangle  {
+    protected double height;  // To hold height.
+    protected double width;  //To hold width or base
 
-
-    public Rectangle(double length, double width) {
-        super(length, width);
+    /**
+     *  The setValue method sets the data
+     *  in the height and width field.
+     */
+    public void setValues(double height, double width)
+    {
+        this.height = height;
+        this.width = width;
     }
 
 
