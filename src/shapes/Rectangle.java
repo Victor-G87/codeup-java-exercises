@@ -14,5 +14,17 @@ class Rectangle  {
         this.width = width;
     }
 
+    public static void main (String[] args)
+    {
+        double length = 4.5;
+        double width = 8.0;
+        double area = length*width;
+        double perimeter = 2 * (length + width);
+        System.out.println("Perimeter of rectangle is " + perimeter + " units.");
+        System.out.println("Area of rectangle is " + area + " sq. units.");
+    }
+
+
+
 
 }

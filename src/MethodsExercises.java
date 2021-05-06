@@ -10,6 +10,7 @@ public class MethodsExercises {
         System.out.println(multiplier(2, 3));
         System.out.println(multiplierLoop(2, 10));
         System.out.println(recursionX(3, 3));
+        diceRoll();
 
 
 
@@ -133,6 +134,24 @@ public class MethodsExercises {
         }
         return n * factorial(n - 1);
     }
+
+    public static void diceRoll() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of sides for a pair of dice: ");
+        double diceSides = sc.nextInt();
+        System.out.println("Would you like to roll the dice?");
+        String question = sc.next();
+        if(question.equals("yes")) {
+            System.out.println(randomNum(diceSides));
+            System.out.println(randomNum(diceSides));
+        }
+    }
+
+    public static double randomNum(double num) {
+        return Math.random() * num + 1;
+    }
+
+
 
 
 
