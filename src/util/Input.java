@@ -33,8 +33,20 @@ public class Input {
         return check.equalsIgnoreCase("yes") || check.equalsIgnoreCase("y");
     }
 
+//    public int getInt(int min, int max){
+//        int userInput = getInt();
+//        if(userInput >= min && userInput <= max){
+//            return userInput;
+//        }else {
+//            System.out.println("Out of range");
+//            return getInt(min, max);
+//        }
+//    }
+
     public int getInt(int min, int max){
-        int userInput = getInt();
+//        int userInput = getInt();
+        int userInput = Integer.valueOf(scanner.nextLine());
+
         if(userInput >= min && userInput <= max){
             return userInput;
         }else {
@@ -46,9 +58,9 @@ public class Input {
 
     public int getInt(){
         try {
-            return Integer.valueOf(getString("Give me a number: "));
+            return Integer.valueOf(getString("Enter a number: "));
         }catch(NumberFormatException e) {
-            System.out.println("Invalid type please try again.");
+            System.out.println("Invalid please try again.");
 
             return getInt();
         }
